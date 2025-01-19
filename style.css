@@ -1010,7 +1010,7 @@ footer {
    }
 
    #booking button {
-      width: 100%;
+      width: 55%;
       padding: 10px;
       border: none;
       cursor: pointer;
@@ -1135,6 +1135,7 @@ footer {
    }
 
    #booking button {
+      width: 60%;
       font-size: .78rem;
       letter-spacing: .04rem;
       padding: 10px 0px;
@@ -1219,6 +1220,7 @@ footer {
    }
 
    #booking button {
+      width: 80%;
       font-size: .65rem;
       letter-spacing: .02rem;
       padding: 10px auto;
