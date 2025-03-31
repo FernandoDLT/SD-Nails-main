@@ -1,0 +1,1234 @@
+/* General Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+/* Body and Layout */
+body {
+   font-family: sans-serif;
+   line-height: 1.2;
+   padding: 20px;
+}
+
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 8px 0;
+   background-color: rgb(255, 255, 255);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 999;
+   transition: top 1s ease, opacity .3s;
+   box-shadow: 0em .0em .995em rgb(233, 145, 143);
+}
+
+.nav-container {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   max-width: 1200px;
+   position: relative;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.nav-container nav {
+   display: flex;
+   margin: 0;
+}
+
+.nav-container ul {
+   display: flex;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.nav-container li {
+   margin: 0 28px;
+}
+
+/* LOGO */
+.sd-logo img {
+   height: 150px;
+   margin: 0;
+}
+
+.nav-container .sd-logo {
+   display: flex;
+   justify-content: center;
+   flex-shrink: 0;
+   position: relative;
+   margin: 0 160px;
+   width: 40px;
+}
+
+.nav-container .left-nav,
+.nav-container .right-nav {
+   display: flex;
+   flex: 1;
+   padding: 0px;
+}
+
+.nav-container .left-nav {
+   justify-content: flex-end;
+}
+
+.nav-container .right-nav {
+   justify-content: flex-start;
+}
+
+nav ul li a {
+   font-size: clamp(8px, 2.5vw, 14px);
+   font-weight: 600;
+   text-transform: uppercase;
+   color: rgb(255, 124, 121);
+   text-decoration: none;
+   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+   color: rgb(255, 158, 156);
+   text-decoration: underline;
+   transform: scale(1.05);
+}
+
+/* General Section Styling */
+#services-carousel {
+   text-align: center;
+}
+
+/* Services Section */
+#services-carousel ul {
+   list-style: none;
+   font-size: 1.26rem;
+}
+
+#images {
+   width: 90%;
+   margin: 0 auto;
+   overflow: hidden;
+   position: relative;
+}
+
+#carousel {
+   display: flex;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   transition: transform .6s ease;
+}
+
+#carousel li {
+   min-width: 100%;
+   height: auto;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   margin-top: 180px;
+   align-items: center;
+}
+
+#carousel li span {
+   position: absolute;
+   top: 10px;
+   color: white;
+   background: rgba(122, 122, 122, 0.4);
+   padding: 8px 20px;
+   border-radius: 8px;
+   font-size: 16px;
+   font-weight: bold;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#carousel li img {
+   width: 60%;
+   max-width: 300%;
+   height: auto;
+   object-fit: contain;
+}
+
+#carousel-controls {
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   top: 62.5%;
+   width: 100%;
+   transform: translateY(-50%);
+   padding: 0 10px;
+}
+
+#carousel-controls button {
+   display: none;
+   background-color: rgba(35, 34, 34, 0.7);
+   font-size: 2em;
+   opacity: .2;
+   color: #fff;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+#carousel-controls button.prev {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+#carousel-controls button.next {
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+/* Show the buttons when the user hovers over the images container */
+#images:hover #carousel-controls button {
+   display: block;
+   opacity: .3;
+}
+
+#carousel-controls button:hover {
+   background-color: rgba(121, 120, 120, 0.9);
+}
+
+/* Additional styles to align the buttons at the edges */
+#carousel-controls .prev {
+   position: absolute;
+   left: 20%;
+   transform: translateY(-50%);
+}
+
+#carousel-controls .next {
+   position: absolute;
+   right: 20%;
+   transform: translateY(-50%);
+}
+
+/* Scrolls to top of page*/
+#main {
+   scroll-margin-top: 50px;
+}
+
+/* Main Welcome Section h1 */
+#main h1 {
+   font-size: 1.22rem;
+   font-family: 'Playfair Display', serif;
+   text-align: center;
+   text-transform: uppercase;
+   color: rgb(247, 84, 81);
+   margin: 20px 0 10px;
+   letter-spacing: .06rem;
+}
+
+section p {
+   text-align: center;
+   width: 80%;
+}
+   
+#main p {
+   padding: 6px 0;
+   width: 80%;
+   /* margin: 0 auto; */
+   margin: 0px auto 30px;
+   font-size: 1.1em;
+   text-align: center;
+}
+
+/* About Me */
+.about h2, #my-services h2, #gallery h2 {
+   margin-bottom: 4px;
+   text-align: center;
+   font-size: 1.3em;
+   font-family: 'Playfair Display', serif;
+   color: rgb(255, 124, 121);
+}
+
+#gallery h2 {
+   /* Center the text */
+   text-align: center;
+   position: relative;
+   margin: 30px 0 20px;
+   font-size: 1.32em;
+   font-size: clamp(1.16em, 2vw, 1.32em);
+   text-transform: uppercase;
+   /* Enable positioning for pseudo-elements */
+}
+
+#gallery h2::before,
+#gallery h2::after {
+   content: "";
+   /* Empty content for decorative lines */
+   position: absolute;
+   top: 50%;
+   /* Align vertically with the h2 text */
+   width: 30%;
+   /* Adjust width as needed */
+   height: 1px;
+   /* Line thickness */
+   background-color: rgb(255, 124, 121);
+   /* Line color */
+}
+
+#gallery h2::before {
+   left: 145px;
+   /* Align the left line to the start */
+}
+
+#gallery h2::after {
+   right: 145px;
+   /* Align the right line to the end */
+}
+
+#my-services {
+   scroll-margin-top: 190px;
+}
+
+#my-services p {
+   text-align: center;
+   width: 80%;
+   margin: 0 auto;
+   scroll-margin-top: 90px;
+   margin: 0 auto 24px;
+}
+
+#services-carousel {
+   scroll-margin-top: 20px;
+}
+
+#booking,
+#contact-and-map{
+   scroll-margin-top: 200px;
+}
+
+#gallery {
+   scroll-margin-top: 190px;
+}
+
+.row {
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   padding: 0 4px;
+   width: 70%;
+   margin: 0 auto;
+}
+
+/* Creates 3 equal columns that sits next to each other */
+.column {
+   -ms-flex: 33%;
+   flex: 33%;
+   max-width: 33%;
+   padding: 0 4px;
+}
+
+.column img {
+   margin-top: 8px;
+   margin-bottom: 40px;
+   vertical-align: middle;
+   width: 100%;
+}
+
+hr {
+   width: 78%;
+   margin: 20px auto 50px;
+   border: 0px solid rgb(255, 167, 166);
+   border-width: .01px;
+}
+
+/* Bokking Section - Business-Hrs, Contact Info/Map and Form   */
+#booking {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   gap: 55px;
+}
+
+/* SD Nails h3 */
+#booking h3 {
+   margin-bottom: 22px;
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+   text-align: center;
+   color: rgb(255, 124, 121);
+}
+
+#booking .business-hrs .sd-logo img {
+   /* display: none; */
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   width: 80px;
+   height: auto;
+}
+
+.business-hrs {
+   margin-top: 0px;
+}
+
+.business-hrs ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.business-hrs .day {
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+}
+
+.business-hrs ul li {
+   list-style-type: none;
+   display: flex;
+   justify-content: flex-start;
+   margin-bottom: 6px;
+   font-size: .8rem;
+}
+
+.contact-details {
+   margin-bottom: 40px;
+}
+
+.contact-details b {
+   color: #333;
+   font-weight: bold;
+   font-size: 1em;
+   font-style: italic;
+}
+
+ul.contact-details li b {
+   width: 80px;
+   display: inline-block;
+}
+
+ul.contact-details li.city {
+   padding-left: 50px;
+}
+
+ul#contact-details {
+   margin-bottom: 20px;
+}
+
+/* Booking Form */
+#booking form {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 15px;
+}
+
+/* Form and Info H2 */
+.form-and-info h2 {
+   display: block;
+   font-family: 'Playfair Display', serif;
+   margin: 11.5px auto 0;
+   font-size: .94em;
+   color: rgb(255, 124, 121);
+}
+
+#booking form label {
+   margin-top: 5px;
+   margin-left: 2px;
+   font-size: .90em;
+   font-weight: 600;
+   color: rgb(87, 87, 87);
+}
+
+#booking form input,
+#booking form select {
+   width: 100%;
+   padding: 5px;
+   margin: 4px 0 10px 0;
+}
+
+#booking button {
+   width: 100%;
+   margin: 1px 0 0;
+   padding: 10px 20px;
+   color: white;
+   background-color: rgb(255, 124, 121);
+   font-size: .8rem;
+   border: .02em solid white;
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: -3px 4px 8px rgba(233, 112, 112, 0.7);
+}
+
+#booking button:hover {
+   background-color: rgb(233, 145, 143);
+}
+
+h4 {
+   margin-bottom: 400px;
+   color: rgb(252, 10, 6);
+}
+
+form input,
+form select {
+   padding: 10px;
+   font-size: 1rem;
+   border: 1px solid #cfcccc;
+   border-radius: 5px;
+   width: 100%;
+}
+
+section p {
+   text-align: center;
+   width: 80%;
+   margin: 10px auto;
+}
+
+h1 {
+   color: black;
+   text-align: center;
+}
+
+#calendar {
+   max-width: 900px;
+   margin: 40px auto;
+}
+
+.hide {
+   display: none;
+}
+
+.fc-event-container {
+   max-height: none !important;
+}
+
+
+#delete-button:hover {
+   color: white;
+   background-color: red;
+}
+
+.box.show-message::before,
+.box.show-message::after {
+   display: none;
+}
+
+::placeholder {
+   color: rgb(185, 185, 185);
+   font-size: .86rem;
+   font-weight: bold;
+}
+
+.dismiss {
+   background-color: rgb(255, 255, 255);
+   border: none;
+   padding: 10px 20px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+/* Check Mark Icon */
+.icon-card-2 {
+   width: 38px;
+   margin-bottom: 10px;
+}
+
+/* Thank You Message in the Card */
+.card h4 {
+   margin: 10px auto 10px;
+   font-size: 1.3rem;
+   font-family: 'Playfair Display', serif;
+   color: rgb(64, 154, 68);
+}
+
+/* Message sent Text */
+.card span {
+   margin-bottom: 10px;
+   font-size: .84rem;
+   color: rgb(64, 154, 68);
+}
+
+form button:hover {
+   background-color: #ff4f9f;
+}
+
+#booking .business-hrs h4 {
+   margin: 10px 0 23px;
+   font-family: 'Playfair Display', serif;
+   font-size: .96rem;
+   color: rgb(255, 124, 121);
+}
+
+ul.contact-details li {
+   display: flex;
+   justify-content: flex-start;
+   margin-bottom: 4px;
+   font-size: .8rem;
+}
+
+ul.contact-details li.city {
+   padding-left: 50px;
+}
+
+
+#contact-and-map .contact-details {
+   display: block;
+   width: 100%;
+   margin: 0 auto 10px;
+}
+
+.map-container {
+   box-shadow: -8px 8px 8px rgba(48, 48, 48, 0.233);
+}
+
+li.day {
+   display: flex;
+   justify-content: flex-start;
+   margin-bottom: 4px;
+   font-size: .8rem;
+}
+
+li.day b {
+   width: 90px;
+}
+
+.hide {
+   display: none;
+}
+
+.card {
+   display: none;
+}
+
+.card.show {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   background-color: rgb(255, 255, 255);
+   border-radius: 8px;
+}
+
+/* Footer */
+footer {
+   text-align: center;
+   margin: 50px auto 0;
+   font-size: clamp(12px, 3vw, 16px);
+   color: rgb(253, 160, 159);
+}
+
+/* Mobil Nav view */
+.burger-menu {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   display: none;
+   cursor: pointer;
+   z-index: 1000;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 20px;
+   box-shadow: -8px 8px 8px rgba(48, 48, 48, 0.233);
+}
+
+.burger-menu span {
+   height: 4px;
+   border-radius: 2px;
+   right: 0;
+}
+
+@media (max-width: 986px) {
+   #main {
+      scroll-margin-top: -810px;
+   }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1180px) {
+   #main {
+      scroll-margin-top: -10px;
+   }
+
+   #my-services, 
+   #booking,
+   #gallery,
+   #contact-and-map {
+      scroll-margin-top: 170px;
+   }
+   
+   .nav-container {
+      padding: 10px;
+   }
+
+   .nav-container nav li {
+      margin: 14px;
+   }
+
+   .nav-container .sd-logo {
+      margin: 0 10px;
+   }
+
+   .sd-logo img {
+      height: 100px;
+   }
+
+   .nav-container .left-nav,
+   .nav-container .right-nav {
+      margin: 0 10px;
+      justify-content: center;
+   }
+
+   nav ul li a {
+      font-size: .82rem;
+   }
+
+   #carousel-controls {
+      top: 65%;
+   }
+
+   #carousel-controls button {
+      font-size: 1.2em;
+      padding: 10px;
+   }
+
+   h1.title {
+      font-size: 1.24em;
+      letter-spacing: .05rem;
+   }
+
+   .title::before,
+   .title::after {
+      display: none;
+   }
+
+   .welcome p {
+      font-size: .92em;
+   }
+
+   #gallery h2::before {
+      left: 80px;
+      /* Align the left line to the start */
+   }
+
+   #gallery h2::after {
+      right: 80px;
+      /* Align the right line to the end */
+   }
+
+   #booking .business-hrs h4 {
+      margin-top: 7px;
+      text-align: center;
+      font-size: 1em;
+   }
+
+   footer {
+      font-size: .88rem;
+   }
+}
+
+@media (max-width: 769px) {
+   body {
+      padding-top: 0;
+      margin-top: 0;
+   }
+
+   #my-services,
+   #booking,
+   #gallery,
+   #contact-and-map {
+      scroll-margin-top: 310px;
+   }
+
+   #main {
+      scroll-margin-top: 120px;
+   }
+
+   #services-carousel {
+      scroll-margin-top: 300px;
+   }
+
+   header {
+      padding: 0;
+   }
+
+   .nav-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-height: 50vw;
+      overflow: auto;
+      height: 200px;
+   }
+
+   div#images li {
+      margin-top: 40px;
+   }
+
+   #carousel-controls button {
+      font-size: 1.2em;
+      padding: 6px;
+   }
+
+   .welcome {
+      padding: 4px 0 0px;
+   }
+
+   #main p {
+      font-size: .92em;
+      margin: 0 auto 20px;
+   }
+
+   .burger-menu {
+      display: flex;
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index: 1100;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 25px;
+      width: 30px;
+   }
+
+   .burger-menu span {
+      background-color: #000;
+      height: 3px;
+      width: 100%;
+      border-radius: 2px;
+   }
+
+   .nav-container.nav-open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 0px;
+      width: 100%;
+      padding-top: 0;
+      z-index: 1000;
+   }
+
+   .nav-container nav {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+      transition: background-color 0.3s;
+   }
+
+   .nav-container ul {
+      top: 0;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .right-nav ul {
+      border-bottom: 1px solid rgb(253, 160, 159);
+   }
+
+   .nav-container li {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+   }
+
+   .nav-container nav.active {
+      display: flex;
+   }
+
+   .nav-container {
+      overflow: hidden;
+   }
+
+   #carousel-controls {
+      top: 55%;
+   }
+
+   #carousel li span {
+      position: absolute;
+      top: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      font-size: .68em;
+   }
+
+   #carousel li img {
+      width: 60%;
+   }
+
+   #services-carousel {
+      transition: margin-top .9s ease;
+   }
+
+   main p {
+      margin-bottom: 1px;
+   }
+
+   #main .about {
+      margin-bottom: 4px;
+   }
+
+   #main .about h2, #my-services h2 {
+      font-size: 1.15em;
+   }
+
+   #my-services p {
+      width: 80%;
+      font-size: .92em;
+   }
+
+   #gallery h2::before {
+      left: 55px;
+      /* Align the left line to the start */
+   }
+
+   #gallery h2::after {
+      right: 55px;
+      /* Align the right line to the end */
+   }
+
+   hr {
+      margin: 10px auto 20px;
+   }
+
+   h2 {
+      font-size: 1.2em;
+      margin: 10px auto 0;
+   }
+
+   #booking {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 30px;
+      width: 100%;
+   }
+   
+   #booking .business-hrs,
+   #booking .contact-and-map {
+      grid-column: span 1;
+   }
+
+   #booking .form-and-info {
+      grid-column: span 2;
+   }
+
+   /* Stacks the contact details, business hours, and booking section vertically */
+   .form-and-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .form-and-info h2 {
+      font-size: 1em;
+   }
+
+   #booking form label {
+      font-size: .76em;
+   }
+
+   #contact-and-map {
+      display: block;
+      width: auto;
+      margin: 0;
+      padding: 0;
+   }
+
+   .contact-details {
+      list-style: none;
+      padding: 0;
+      width: fit-content;
+      margin: 0 auto;
+   }
+
+   .contact-details li {
+      text-align: left;
+   }
+
+   #contact-and-map .contact-details {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: left;
+      padding-bottom: 10px;
+   }
+
+   .map-container {
+      margin: 0 auto;
+      width: 100%;
+   }
+
+   .business-hrs {
+      width: 200px;
+      margin: 0px auto;
+   }
+
+   #contact-and-map {
+      order: 1;
+   }
+
+   .business-hrs {
+      order: 2;
+   }
+
+   .form-and-info {
+      order: 3;
+   }
+
+   ul.contact-details li b {
+      width: 70px;
+   }
+
+   #booking form {
+      width: 50%;
+      margin-bottom: 20px;
+   }
+
+   #booking input,
+   #booking select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+   }
+
+   .business-hrs ul li {
+      margin-bottom: 6px;
+   }
+
+   #booking button {
+      width: 55%;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      margin: 4px auto 10px;
+   }
+
+   .card span {
+      font-size: 1em;
+   }
+
+   footer {
+      margin-top: 20px;
+      font-size: .74em;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   #main {
+      scroll-margin-top: 114px;
+   }
+
+   #gallery {
+      scroll-margin-top: 320px;
+   }
+
+   #my-services,
+   #booking,
+   #contact-and-map {
+      scroll-margin-top: 300px;
+   }
+
+
+   #main h1 {
+      font-size: .98em;
+   }
+
+   #main .about h2,
+   #my-services h2 {
+      font-size: 1.1em;
+   }
+
+   #main p {
+      font-size: .82em;
+   }
+
+   /* Gallery images chrink to size */
+   .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+   }
+
+   #gallery h2::before,
+   #gallery h2::after {
+      width: 26%;
+   }
+
+   #gallery h2::before {
+      left: 60px;
+      /* Align the left line to the start */
+   }
+
+   #gallery h2::after {
+      right: 60px;
+      /* Align the right line to the end */
+   }
+
+   #booking {
+      display: flex;
+      flex-direction: column;
+   }
+
+   #booking h3 {
+      margin-top: 20px;
+      font-size: 1.26em;
+   }
+   
+   #booking h4 {
+      font-size: 1em;
+      text-align: center;
+   }
+
+   .contact-details,
+   .form-and-info {
+      width: 70%;
+      margin: 10px auto 0;
+   }
+   
+   .map-container {
+      width: 55%;
+      margin: 10px auto 0;
+      border: 1px solid rgb(180, 180, 180);
+   }
+
+   .business-hrs ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 0 auto;
+   }
+
+   .business-hrs ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .business-hrs ul li {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+   }
+   
+   .form-and-info {
+      width: 100%;
+      margin: 0 auto;
+   }
+
+   #booking button {
+      width: 60%;
+      font-size: .78rem;
+      letter-spacing: .04rem;
+      padding: 10px 0px;
+   }
+}
+
+@media (max-width: 480px) {
+   #main h1 {
+      font-size: .9rem;
+      margin-bottom: 2px;
+   }
+      
+   #main {
+      scroll-margin-top: 125px;
+   }
+   
+   #my-services {
+      scroll-margin-top: 305px;
+   }
+   
+   #main p {
+      font-size: .8em;
+      margin-bottom: 16px;
+   }
+   
+   #gallery {
+      scroll-margin-top: 320px;
+   }
+   
+   #booking,
+   #contact-and-map {
+      scroll-margin-top: 290px;
+   }
+   
+   #main .about h2, #my-services h2 {
+      font-size: .9rem;
+      margin-bottom: 2px;
+   }
+
+   #carousel li img {
+      width: 90%;
+   }
+
+   #carousel-controls {
+      display: none;
+   }
+
+   #carousel li span {
+      position: absolute;
+      top: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      font-size: .56em;
+   }
+
+   #gallery h2 {
+      font-size: .88em;
+   }
+
+
+   #gallery h2::before,
+   #gallery h2::after {
+      width: 20%;
+   }
+
+   #gallery h2::before {
+      left: 58px;
+   }
+
+   #gallery h2::after {
+      right: 58px;
+   }
+
+   hr {
+      margin: 10px auto 5px;
+      width: 78%;
+   }
+
+   nav ul li a {
+      font-size: .68em;
+   }
+
+   #booking button {
+      width: 80%;
+      font-size: .65rem;
+      letter-spacing: .02rem;
+      padding: 10px auto;
+      margin-bottom: 4px;
+   }
+
+   footer {
+      font-size: .68em;
+      margin: 20px auto;
+   }
+}
